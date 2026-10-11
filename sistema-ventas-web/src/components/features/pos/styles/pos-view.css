@@ -1,0 +1,283 @@
+/* ─── Reset & base ─────────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ─── Layout raíz ──────────────────────────────────────────────────────────── */
+.pos-container {
+  min-height: 100vh;
+  padding: 20px;
+  background:
+    radial-gradient(circle at top, rgba(147, 197, 253, 0.18), transparent 22%),
+    linear-gradient(135deg, #f8fbff 0%, #eef4ff 45%, #ffffff 100%);
+  color: #0f172a;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+/* ─── Header ───────────────────────────────────────────────────────────────── */
+.pos-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 20px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.97);
+  border: 1px solid #e5eefb;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.07);
+  margin-bottom: 20px;
+}
+
+/* Marca */
+.brand-block {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-mark {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+  color: #fff;
+  font-size: 0.88rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  flex-shrink: 0;
+}
+
+.brand-kicker {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.68rem;
+  color: #2563eb;
+  font-weight: 800;
+}
+
+.brand-title {
+  margin: 2px 0;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  color: #111827;
+}
+
+.brand-copy {
+  margin: 3px 0 0;
+  color: #64748b;
+  font-size: 0.88rem;
+  max-width: 400px;
+}
+
+/* Acciones del header */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 260px;
+  padding: 9px 14px;
+  border-radius: 12px;
+  background: #f8fafc;
+  border: 1px solid #dbeafe;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  color: #0f172a;
+  font-size: 0.9rem;
+}
+
+.search-box input::placeholder {
+  color: #94a3b8;
+}
+
+/* Botón logout */
+.btn-logout {
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid #fecaca;
+  background: #fff;
+  color: #dc2626;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  white-space: nowrap;
+}
+
+.btn-logout:hover {
+  background: #fef2f2;
+  border-color: #f87171;
+}
+
+/* Avatar de sesión */
+.session-chip {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid #dbeafe;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.82rem;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* ─── Layout principal (dos columnas) ──────────────────────────────────────── */
+.pos-layout {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 18px;
+  align-items: start;
+}
+
+/* ─── Paneles ───────────────────────────────────────────────────────────────── */
+.pos-panel {
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.97);
+  border: 1px solid #e5eefb;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.07);
+  padding: 20px;
+}
+
+.pos-panel--cart {
+  position: sticky;
+  top: 20px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+}
+
+/* ─── Cabecera del panel ────────────────────────────────────────────────────── */
+.panel-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.panel-label {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.68rem;
+  color: #2563eb;
+  font-weight: 800;
+}
+
+.panel-title {
+  margin: 2px 0 0;
+  font-size: 1.1rem;
+  color: #111827;
+}
+
+/* Cabecera del carrito lateral */
+.cart-summary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.cart-title {
+  margin: 2px 0 0;
+  font-size: 1rem;
+  color: #111827;
+}
+
+/* ─── Chips ─────────────────────────────────────────────────────────────────── */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border: 1px solid #dbeafe;
+  white-space: nowrap;
+}
+
+.chip--success {
+  background: #ecfdf5;
+  color: #047857;
+  border-color: #a7f3d0;
+}
+
+/* ─── Grid de productos ─────────────────────────────────────────────────────── */
+.pos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+/* ─── Estado vacío ──────────────────────────────────────────────────────────── */
+.empty-state {
+  padding: 32px 20px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
+  border: 1px dashed #cbd5e1;
+  color: #64748b;
+  text-align: center;
+}
+
+.empty-state p {
+  margin: 0;
+}
+
+/* ─── Responsive ─────────────────────────────────────────────────────────────── */
+@media (max-width: 1100px) {
+  .pos-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .pos-panel--cart {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .pos-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .header-actions {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .search-box {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .pos-container {
+    padding: 12px;
+  }
+
+  .pos-grid {
+    grid-template-columns: 1fr;
+  }
+}
